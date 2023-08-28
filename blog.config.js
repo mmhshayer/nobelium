@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'The Noble Quest',
-  author: 'Mohammad Mustakim Hassan',
+  // author: 'Mohammad Mustakim Hasssan',
   email: 'mmhshayer@gmail.com',
   link: 'https://thenoblequest.vercel.app',
   description: 'Shall rest in quiet only when I find',
@@ -18,7 +18,7 @@ const BLOG = {
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  socialLink: 'https://twitter.com/mmhshayer',
+  // socialLink: 'https://twitter.com/mmhshayer',
   seo: {
     keywords: ['Mohammad Mustakim Hassan', 'Website', 'Notion', 'Blog'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
