@@ -8,6 +8,7 @@ import { useConfig } from '@/lib/config'
 import { createHash } from 'crypto'
 import Container from '@/components/Container'
 import Post from '@/components/Post'
+import SocialShare from '@/components/SocialShare'
 import Comments from '@/components/Comments'
 
 export default function BlogPost ({ post, blockMap, emailHash }) {
@@ -66,6 +67,7 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
       </div>
 
       <Comments frontMatter={post} />
+      <SocialShare post={post} />
     </Container>
   )
 }

@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'The Noble Quest',
-  // author: 'Mohammad Mustakim Hasssan',
+  author: 'Mohammad Mustakim Hasssan',
   email: 'mmhshayer@gmail.com',
   link: 'https://thenoblequest.vercel.app',
   description: 'Shall rest in quiet only when I find',
@@ -14,11 +14,11 @@ const BLOG = {
   since: 2023, // If leave this empty, current year will be used.
   postsPerPage: 7,
   sortByDate: true,
-  showAbout: true,
+  showAbout: false,
   showArchive: true,
   autoCollapsedNavBar: false, // The automatically collapsed navigation bar
   ogImageGenerateURL: 'https://og-image-craigary.vercel.app', // The link to generate OG image, don't end with a slash
-  // socialLink: 'https://twitter.com/mmhshayer',
+  socialLink: 'https://twitter.com/mmhshayer',
   seo: {
     keywords: ['Mohammad Mustakim Hassan', 'Website', 'Notion', 'Blog'],
     googleSiteVerification: '' // Remove the value or replace it with your own google site verification code
@@ -55,6 +55,15 @@ const BLOG = {
       host: 'https://cusdis.com', // data-host, change this if you're using self-hosted version
       scriptSrc: 'https://cusdis.com/js/cusdis.es.js' // change this if you're using self-hosted version
     }
+  },
+  shareButtons: {
+    twitter: true,
+    linkedin: true,
+    reddit: true,
+    facebook: true,
+    whatsapp: true,
+    telegram: true,
+    ycombinator: true
   },
   isProd: process.env.VERCEL_ENV === 'production' // distinguish between development and production environment (ref: https://vercel.com/docs/environment-variables#system-environment-variables)
 }
