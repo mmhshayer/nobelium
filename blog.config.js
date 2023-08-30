@@ -1,6 +1,6 @@
 const BLOG = {
   title: 'The Noble Quest',
-  author: 'Mohammad Mustakim Hasssan',
+  // author: 'Mohammad Mustakim Hasssan',
   email: 'mmhshayer@gmail.com',
   link: 'https://thenoblequest.vercel.app',
   description: 'Shall rest in quiet only when I find',
