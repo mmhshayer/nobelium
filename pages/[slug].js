@@ -39,7 +39,7 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
       />
 
       {/* Back and Top */}
-      <div
+      {/* <div
         className={cn(
           'px-4 flex justify-between font-medium text-gray-500 dark:text-gray-400 my-5',
           fullWidth ? 'md:px-24' : 'mx-auto max-w-2xl'
@@ -53,19 +53,19 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
             ← {locale.POST.BACK}
           </button>
         </a>
-        <a>
-          <button
-            onClick={() => window.scrollTo({
-              top: 0,
-              behavior: 'smooth'
-            })}
-            className="mt-2 cursor-pointer hover:text-black dark:hover:text-gray-100"
-          >
-            ↑ {locale.POST.TOP}
-          </button>
-        </a>
-      </div>
 
+      </div> */}
+      <a className='fixed bottom-16 right-4 xl:right-1/4'>
+        <button
+          onClick={() => window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          })}
+          className="p-2 md:px-4 rounded-full xl:rounded-md cursor-pointer bg-gray-400 hoover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400"
+        >
+          ↑
+        </button>
+      </a>
       <Comments frontMatter={post} />
       <SocialShare post={post} />
     </Container>
