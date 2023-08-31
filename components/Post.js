@@ -21,6 +21,8 @@ export default function Post (props) {
   const { post, blockMap, fullWidth = false } = props
   const { dark } = useTheme()
 
+  const min_read = Math.ceil(post.words / 200)
+
   return (
     <article className={cn('flex flex-col', fullWidth ? 'md:px-24' : 'items-center')}>
       <h1 className={cn(
@@ -35,6 +37,7 @@ export default function Post (props) {
           { 'max-w-2xl px-4': !fullWidth }
         )}>
           <FormattedDate date={post.date} />
+          {post.words && ` • ${min_read} min`}
           {post.words && ` • ${post.words} words`}
           {post.author && ` • ${post.author}`}
         </sup>
