@@ -1,7 +1,5 @@
 import PropTypes from 'prop-types'
-import Image from 'next/image'
 import cn from 'classnames'
-import { useConfig } from '@/lib/config'
 import useTheme from '@/lib/theme'
 import FormattedDate from '@/components/FormattedDate'
 import TagItem from '@/components/TagItem'
@@ -20,8 +18,7 @@ import TableOfContents from '@/components/TableOfContents'
  * @prop {boolean} [fullWidth] - Whether in full-width mode
  */
 export default function Post (props) {
-  const BLOG = useConfig()
-  const { post, blockMap, emailHash, fullWidth = false } = props
+  const { post, blockMap, fullWidth = false } = props
   const { dark } = useTheme()
 
   return (
@@ -42,36 +39,6 @@ export default function Post (props) {
           {post.author && ` • ${post.author}`}
         </sup>
       )}
-      {/* {post.type[0] !== 'Page' && (
-        <nav className={cn(
-          'w-full flex mt-7 items-start text-gray-500 dark:text-gray-400',
-          { 'max-w-2xl px-4': !fullWidth }
-        )}>
-          <div className="flex mb-4">
-            <a href={BLOG.socialLink || '#'} className="flex">
-              <Image
-                alt={BLOG.author}
-                width={24}
-                height={24}
-                src={`https://gravatar.com/avatar/${emailHash}`}
-                className="rounded-full"
-              />
-              <p className="ml-2 md:block">{BLOG.author}</p>
-            </a>
-            <span className="block">&nbsp;/&nbsp;</span>
-          </div>
-          <div className="mr-2 mb-4 md:ml-0">
-            <FormattedDate date={post.date} />
-          </div>
-          {post.tags && (
-            <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
-              {post.tags.map(tag => (
-                <TagItem key={tag} tag={tag} />
-              ))}
-            </div>
-          )}
-        </nav>
-      )} */}
       <div className="self-stretch -mt-4 flex flex-col items-center lg:flex-row lg:items-stretch">
         {!fullWidth && <div className="flex-1 hidden lg:block" />}
         <div className={fullWidth ? 'flex-1 pr-4' : 'flex-none w-full max-w-2xl px-4'}>
@@ -83,6 +50,20 @@ export default function Post (props) {
           <TableOfContents blockMap={blockMap} className="pt-3 sticky" style={{ top: '65px' }} />
         </div>
       </div>
+      {post.type[0] !== 'Page' && (
+        <nav className={cn(
+          'w-full flex my-7 items-start text-gray-500 dark:text-gray-400',
+          { 'max-w-2xl px-4': !fullWidth }
+        )}>
+          {post.tags && (
+            <div className="flex flex-nowrap max-w-full overflow-x-auto article-tags">
+              {post.tags.map(tag => (
+                <TagItem key={tag} tag={tag} />
+              ))}
+            </div>
+          )}
+        </nav>
+      )}
     </article>
   )
 }
@@ -90,6 +71,5 @@ export default function Post (props) {
 Post.propTypes = {
   post: PropTypes.object.isRequired,
   blockMap: PropTypes.object.isRequired,
-  emailHash: PropTypes.string.isRequired,
   fullWidth: PropTypes.bool
 }
