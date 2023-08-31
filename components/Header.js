@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { useConfig } from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
+import ThemeToggleButton from '@/components/ThemeToggleButton'
 
 const NavBar = () => {
   const BLOG = useConfig()
@@ -27,6 +28,7 @@ const NavBar = () => {
               </li>
             )
         )}
+        <ThemeToggleButton />
       </ul>
     </div>
   )
