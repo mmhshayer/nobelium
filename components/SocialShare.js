@@ -8,8 +8,6 @@ const SocialShare = ({ post }) => {
     const fullWidth = post.fullWidth ?? false
     const title = post.title ?? BLOG.title
     const pageurl = BLOG.link + '/' + post.slug
-    const tags = [...post.tags]
-
 
     return (
         <div className={cn(
@@ -21,7 +19,7 @@ const SocialShare = ({ post }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on twitter`}
-                    href={`https://twitter.com/intent/tweet/?text=${title}&url=${pageurl}&hashtags=${tags}`}
+                    href={`https://twitter.com/intent/tweet/?text=${title}&url=${pageurl}`}
                 >
                     <svg version="1.1" viewBox="0 0 512 512" space="preserve" height={28} width={28} fill="currentColor">
                         <path
