@@ -8,6 +8,7 @@ import { useConfig } from '@/lib/config'
 import { createHash } from 'crypto'
 import Container from '@/components/Container'
 import Post from '@/components/Post'
+import ScrollToTop from '@/components/ScrollToTop'
 import SocialShare from '@/components/SocialShare'
 import Comments from '@/components/Comments'
 
@@ -55,17 +56,7 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
         </a>
 
       </div> */}
-      <a className='fixed bottom-16 right-4 xl:right-1/4'>
-        <button
-          onClick={() => window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          })}
-          className="p-2 md:px-4 rounded-full xl:rounded-md cursor-pointer bg-gray-400 hoover:bg-gray-500 dark:bg-gray-500 dark:hover:bg-gray-400"
-        >
-          ↑
-        </button>
-      </a>
+      <ScrollToTop />
       <Comments frontMatter={post} />
       <SocialShare post={post} />
     </Container>

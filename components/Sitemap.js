@@ -7,8 +7,8 @@ const Sitemap = () => {
             target="_blank"
             aria-label="Sitemap"
         >
-            <svg width={28} className='text-gray-500 dark:text-gray-400' fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" space="preserve">
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+            <svg height={28} width={28} className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500' fill="currentColor" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" space="preserve">
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
                 <g id="SVGRepo_iconCarrier"> <g> <g> <g>
                     <path d="M472.178,34.62H39.822C17.829,34.62,0,52.449,0,74.442v45.263c0,3.141,2.547,5.689,5.689,5.689h500.622 c3.143,0,5.689-2.547,5.689-5.689V74.442C512,52.449,494.171,34.62,472.178,34.62z M71.805,92.844 c-7.09,0-12.836-5.747-12.836-12.836s5.747-12.836,12.836-12.836c7.089,0,12.836,5.747,12.836,12.836 C84.642,87.097,78.895,92.844,71.805,92.844z M112.957,92.844c-7.09,0-12.836-5.747-12.836-12.836s5.747-12.836,12.836-12.836 s12.836,5.747,12.836,12.836C125.794,87.097,120.046,92.844,112.957,92.844z M154.109,92.844 c-7.089,0-12.836-5.747-12.836-12.836s5.747-12.836,12.836-12.836c7.09,0,12.836,5.747,12.836,12.836 C166.945,87.097,161.198,92.844,154.109,92.844z">
                     </path>
