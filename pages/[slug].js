@@ -67,7 +67,9 @@ export default function BlogPost ({ post, blockMap, emailHash }) {
       </div>
 
       <Comments frontMatter={post} />
-      <SocialShare post={post} />
+      {
+        post.type === 'Post' && (<SocialShare post={post} />)
+      }
     </Container>
   )
 }
