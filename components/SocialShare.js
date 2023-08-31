@@ -9,6 +9,8 @@ const SocialShare = ({ post }) => {
     const title = post.title ?? BLOG.title
     const pageurl = BLOG.link + '/' + post.slug
 
+    if (post.type[0] === 'Page') return null
+
     return (
         <div className={cn(
             'px-4 flex justify-between font-medium text-gray-500 dark:text-gray-400 my-5',
