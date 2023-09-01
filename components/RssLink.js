@@ -8,7 +8,7 @@ const RssLink = () => {
             target="_blank"
             aria-label="RSS"
         >
-            <Rss height={28} width={28} className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500' fill="currentColor" />
+            <Rss height={28} width={28} className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500' />
         </Link>
     )
 }

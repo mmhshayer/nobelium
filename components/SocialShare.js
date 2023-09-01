@@ -14,7 +14,7 @@ const SocialShare = ({ post }) => {
 
     return (
         <div className={cn(
-            'px-4 flex justify-between my-5',
+            'px-4 flex justify-center space-x-4 border-2 rounded-xl py-2 w-fit',
             fullWidth ? 'md:px-24' : 'mx-auto max-w-2xl'
         )}>
             {shareButtonsConfig.twitter && (

@@ -4,15 +4,14 @@ import Image from 'next/image'
 import { useConfig } from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
-import ThemeToggleButton from '@/components/ThemeToggleButton'
 import { Scroll, Spyglass } from '@/svg'
 
 const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name: <Spyglass />, to: '/search', show: true },
-    { id: 1, name: <Scroll />, to: BLOG.path || '/', show: true },
+    { id: 0, name: <Spyglass height={28} className='text-gray-400 hover:text-gray-500' />, to: '/search', show: true },
+    { id: 1, name: <Scroll height={28} className='text-gray-400 hover:text-gray-500' />, to: BLOG.path || '/', show: true },
     { id: 2, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
   ]
   return (
@@ -31,7 +30,6 @@ const NavBar = () => {
               </li>
             )
         )}
-        <ThemeToggleButton />
       </ul>
     </div>
   )

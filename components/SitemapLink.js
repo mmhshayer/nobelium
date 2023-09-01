@@ -8,7 +8,7 @@ const SitemapLink = () => {
             target="_blank"
             aria-label="Sitemap"
         >
-            <Sitemap height={28} width={28} className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500' fill="currentColor" />
+            <Sitemap height={28} width={28} className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500' />
         </Link>
     )
 }

@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { useConfig } from '@/lib/config'
 import SitemapLink from '@/components/SitemapLink'
 import RssLink from '@/components/RssLink'
+import ThemeToggleButton from '@/components/ThemeToggleButton'
 
 const Footer = ({ fullWidth }) => {
   const BLOG = useConfig()
@@ -23,9 +24,9 @@ const Footer = ({ fullWidth }) => {
               © {BLOG.title ?? BLOG.author} {from === y || !from ? y : `${from} - ${y}`}
             </p>
           </Link>
-          <div className='flex'>
+          <div className='flex space-x-4'>
+            <ThemeToggleButton />
             <SitemapLink />
-            <div className='w-4' />
             <RssLink />
           </div>
         </div>
