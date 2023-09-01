@@ -18,7 +18,7 @@ const SocialShare = ({ post }) => {
         )}>
             {shareButtonsConfig.twitter && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on twitter`}
@@ -32,7 +32,7 @@ const SocialShare = ({ post }) => {
             )}
             {shareButtonsConfig.linkedin && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on linkedin`}
@@ -46,7 +46,7 @@ const SocialShare = ({ post }) => {
             )}
             {shareButtonsConfig.reddit && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on reddit`}
@@ -60,7 +60,7 @@ const SocialShare = ({ post }) => {
             )}
             {shareButtonsConfig.facebook && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on facebook`}
@@ -74,7 +74,7 @@ const SocialShare = ({ post }) => {
             )}
             {shareButtonsConfig.whatsapp && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on whatsapp`}
@@ -88,7 +88,7 @@ const SocialShare = ({ post }) => {
             )}
             {shareButtonsConfig.telegram && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on telegram`}
@@ -102,7 +102,7 @@ const SocialShare = ({ post }) => {
             )}
             {shareButtonsConfig.ycombinator && (
                 <a
-                    className='text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
+                    className='text-gray-400 hover:text-gray-500 dark:text-gray-400 dark:hover:text-gray-500'
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={`share ${title} on ycombinator`}

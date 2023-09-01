@@ -5,13 +5,14 @@ import { useConfig } from '@/lib/config'
 import { useLocale } from '@/lib/locale'
 import useTheme from '@/lib/theme'
 import ThemeToggleButton from '@/components/ThemeToggleButton'
+import { Scroll, Spyglass } from '@/svg'
 
 const NavBar = () => {
   const BLOG = useConfig()
   const locale = useLocale()
   const links = [
-    { id: 0, name: '🔍', to: '/search', show: true },
-    { id: 1, name: locale.NAV.INDEX, to: BLOG.path || '/', show: true },
+    { id: 0, name: <Spyglass />, to: '/search', show: true },
+    { id: 1, name: <Scroll />, to: BLOG.path || '/', show: true },
     { id: 2, name: locale.NAV.ABOUT, to: '/about', show: BLOG.showAbout },
   ]
   return (
@@ -24,7 +25,9 @@ const NavBar = () => {
                 key={link.id}
                 className="block ml-4 text-black dark:text-gray-50 nav"
               >
-                <Link href={link.to} target={link.external ? '_blank' : null}>{link.name}</Link>
+                <Link href={link.to} target={link.external ? '_blank' : null}>
+                  {link.name}
+                </Link>
               </li>
             )
         )}
