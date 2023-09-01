@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useConfig } from '@/lib/config'
-import Sitemap from '@/components/Sitemap'
-import Rss from '@/components/Rss'
+import SitemapLink from '@/components/SitemapLink'
+import RssLink from '@/components/RssLink'
 
 const Footer = ({ fullWidth }) => {
   const BLOG = useConfig()
@@ -24,9 +24,9 @@ const Footer = ({ fullWidth }) => {
             </p>
           </Link>
           <div className='flex'>
-            <Sitemap />
+            <SitemapLink />
             <div className='w-4' />
-            <Rss />
+            <RssLink />
           </div>
         </div>
       </div>
